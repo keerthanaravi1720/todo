@@ -1,38 +1,55 @@
-.App {
+/* Light theme */
+:root {
+  --background-color: #f2efef;
+  --text-color: #333;
+  --header-background: #ffffff;
+}
+
+/* Dark theme */
+:root[data-theme='dark'] {
+  --background-color: #000;
+  --text-color: #fff;
+  --header-background: #001529;
+ 
+}
+
+/* Apply the variables to your components */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.site-layout {
+  background-color: var(--background-color);
+}
+
+.site-layout-background {
+  background-color: var(--header-background);
+  /* background-color: #ffffff; */
+  color: #fff;
+}
+
+
+
+
+/* Add hover effect to the selected item */
+.custom-menu-light .ant-menu-item-selected:hover,
+.custom-menu-dark .ant-menu-item-selected:hover {
+  background-color: #002f5e; /* Change to the desired hover background color */
+  color: #fff; /* Change to the desired hover text color */
+}
+
+
+.todo{
+  background-color: rgba(177, 177, 179, 0.85);
+ 
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease;
   text-align: center;
+  font-size: 16px;
+padding: 5px;
+  height: 40px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.div-text{
+  /* margin-top: 20px; */
 }
